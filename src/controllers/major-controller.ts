@@ -20,12 +20,13 @@ export const getMajors = async (req:Request,res:Response):Promise<any>=>{
 export const createMajor = async (req:Request,res:Response):Promise<any>=>{
     try {
         const {learnerId} = req.params
-        const {name} = await req.body
+        const {name,src} = await req.body
 
         const major = await prismadb.major.create({
             data : {
                name,
-               learnerId 
+               learnerId ,
+                src
             }
         })
 
