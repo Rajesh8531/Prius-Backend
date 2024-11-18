@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "prisma:generate": "npx prisma generate --schema=prisma/schema.prisma",
+    "prisma:migrate": "npx prisma migrate deploy --schema=prisma/schema.prisma",
     "start": "ts-node src/index.ts",
     "build": "tsc",
     "dev": "tsx watch src/index.ts"
