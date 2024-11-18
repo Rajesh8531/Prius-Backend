@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prisma:generate": "npx prisma generate --schema=prisma/schema.prisma",
-    "prisma:migrate": "npx prisma migrate deploy --schema=prisma/schema.prisma",
     "start": "ts-node src/index.ts",
     "build": "tsc",
     "dev": "tsx watch src/index.ts"
@@ -14,7 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@prisma/client@5.21.1",
+    "@prisma/client": "^5.21.1",
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
     "@types/jsonwebtoken": "^9.0.7",
